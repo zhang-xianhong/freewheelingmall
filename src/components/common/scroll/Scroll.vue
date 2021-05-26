@@ -33,7 +33,7 @@ export default {
       probeType: this.probeType,
       pullUpLoad:this.pullUpLoad
     })
-    console.log(this.scroll)
+    // console.log(this.scroll)
     // this.scroll.scrollTo(x,y,time)可以做到点击回到某个固定位置的效果
     // 2、监听滚动位置
     if(this.probeType==2 || this.probeType==3) {

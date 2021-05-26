@@ -1,6 +1,6 @@
 <template>
   <div id="home">
-    <nav-bar class="hoem-bar">
+    <nav-bar class="home-bar">
       <div slot="center">随心购商场</div>
     </nav-bar>
     <tab-control :titles="['流行','新款','精选']" @tabClick="tabClick" ref="tabControl1" class="tabcontrols" v-show="isTabFixed"/>
@@ -14,8 +14,6 @@
       <goods-list :goods="showGoods" />
     </scroll>
     <back-top @click.native="backTopClick" v-show="isShowbackTop"/>
-
-
   </div>
 </template>
 <script>
@@ -166,12 +164,11 @@ export default {
       })
     },
     getHomeGoods(type) {
-      const page=this.goods[type].page+1
+      const page = this.goods[type].page+1
        getHomeGoods(type,page).then(res=>{
         //  console.log(res)
          this.goods[type].list.push(...res.data.list)
-         this.goods[type].page+=1;
-         console.log(res.data.list)
+         this.goods[type].page += 1;
         // 完成上拉加载更多
         this.$refs.scroll.finishPullUp()
       })
@@ -187,7 +184,7 @@ export default {
     /* 第二种方法 */
     /* position: relative; */
   }
-  .hoem-bar {
+  .home-bar {
     background-color: var(--color-tint);
     color: #fff;
     position: fixed;

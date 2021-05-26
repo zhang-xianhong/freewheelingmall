@@ -85,7 +85,7 @@ export default {
 
       // 2、获取商品信息
       this.goods=new Goods(data.itemInfo,data.columns,data.shopInfo.services)
-      console.log(this.goods)
+      // console.log(this.goods)
 
       // 3、创建店铺信息对象
       this.shop=new Shop(data.shopInfo)
